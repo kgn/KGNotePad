@@ -10,28 +10,33 @@
 		83CCB5BF16D96D3200547161 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCB5BE16D96D3200547161 /* UIKit.framework */; };
 		83CCB5C116D96D3200547161 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCB5C016D96D3200547161 /* Foundation.framework */; };
 		83CCB5C316D96D3200547161 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCB5C216D96D3200547161 /* CoreGraphics.framework */; };
-		83CCB5C916D96D3200547161 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83CCB5C716D96D3200547161 /* InfoPlist.strings */; };
-		83CCB5CB16D96D3200547161 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CCB5CA16D96D3200547161 /* main.m */; };
-		83CCB5CF16D96D3300547161 /* KGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CCB5CE16D96D3300547161 /* KGAppDelegate.m */; };
-		83CCB5D116D96D3300547161 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CCB5D016D96D3300547161 /* Default.png */; };
-		83CCB5D316D96D3300547161 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CCB5D216D96D3300547161 /* Default@2x.png */; };
-		83CCB5D516D96D3300547161 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CCB5D416D96D3300547161 /* Default-568h@2x.png */; };
+		83F92A3916D96DBC00FAC0E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F92A3216D96DBC00FAC0E4 /* Default-568h@2x.png */; };
+		83F92A3A16D96DBC00FAC0E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F92A3316D96DBC00FAC0E4 /* Default.png */; };
+		83F92A3B16D96DBC00FAC0E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F92A3416D96DBC00FAC0E4 /* Default@2x.png */; };
+		83F92A3C16D96DBC00FAC0E4 /* KGNotePadExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F92A3616D96DBC00FAC0E4 /* KGNotePadExampleAppDelegate.m */; };
+		83F92A3D16D96DBC00FAC0E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F92A3816D96DBC00FAC0E4 /* main.m */; };
+		83F92A4116D96E0C00FAC0E4 /* KGNotePad.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F92A4016D96E0C00FAC0E4 /* KGNotePad.m */; };
+		83F9E8EF16DC96F100DF4286 /* KGNotePadExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F9E8ED16DC96F100DF4286 /* KGNotePadExampleViewController.m */; };
+		83F9E8F016DC96F100DF4286 /* KGNotePadExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F9E8EE16DC96F100DF4286 /* KGNotePadExampleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83CCB5BB16D96D3200547161 /* KGNotePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGNotePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CCB5BB16D96D3200547161 /* KGNotePadExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGNotePadExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CCB5BE16D96D3200547161 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83CCB5C016D96D3200547161 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83CCB5C216D96D3200547161 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		83CCB5C616D96D3200547161 /* KGNotePad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KGNotePad-Info.plist"; sourceTree = "<group>"; };
-		83CCB5C816D96D3200547161 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		83CCB5CA16D96D3200547161 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		83CCB5CC16D96D3200547161 /* KGNotePad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KGNotePad-Prefix.pch"; sourceTree = "<group>"; };
-		83CCB5CD16D96D3300547161 /* KGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGAppDelegate.h; sourceTree = "<group>"; };
-		83CCB5CE16D96D3300547161 /* KGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGAppDelegate.m; sourceTree = "<group>"; };
-		83CCB5D016D96D3300547161 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		83CCB5D216D96D3300547161 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		83CCB5D416D96D3300547161 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		83F92A3216D96DBC00FAC0E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		83F92A3316D96DBC00FAC0E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		83F92A3416D96DBC00FAC0E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		83F92A3516D96DBC00FAC0E4 /* KGNotePadExampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGNotePadExampleAppDelegate.h; sourceTree = "<group>"; };
+		83F92A3616D96DBC00FAC0E4 /* KGNotePadExampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGNotePadExampleAppDelegate.m; sourceTree = "<group>"; };
+		83F92A3716D96DBC00FAC0E4 /* KGNotePadExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KGNotePadExample-Prefix.pch"; sourceTree = "<group>"; };
+		83F92A3816D96DBC00FAC0E4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83F92A3F16D96E0C00FAC0E4 /* KGNotePad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KGNotePad.h; path = ../KGNotePad.h; sourceTree = "<group>"; };
+		83F92A4016D96E0C00FAC0E4 /* KGNotePad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KGNotePad.m; path = ../KGNotePad.m; sourceTree = "<group>"; };
+		83F9E8EC16DC96F100DF4286 /* KGNotePadExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGNotePadExampleViewController.h; sourceTree = "<group>"; };
+		83F9E8ED16DC96F100DF4286 /* KGNotePadExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGNotePadExampleViewController.m; sourceTree = "<group>"; };
+		83F9E8EE16DC96F100DF4286 /* KGNotePadExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KGNotePadExampleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +56,9 @@
 		83CCB5B216D96D3200547161 = {
 			isa = PBXGroup;
 			children = (
-				83CCB5C416D96D3200547161 /* KGNotePad */,
+				83F92A3F16D96E0C00FAC0E4 /* KGNotePad.h */,
+				83F92A4016D96E0C00FAC0E4 /* KGNotePad.m */,
+				83F92A3E16D96DC100FAC0E4 /* Example */,
 				83CCB5BD16D96D3200547161 /* Frameworks */,
 				83CCB5BC16D96D3200547161 /* Products */,
 			);
@@ -60,7 +67,7 @@
 		83CCB5BC16D96D3200547161 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83CCB5BB16D96D3200547161 /* KGNotePad.app */,
+				83CCB5BB16D96D3200547161 /* KGNotePadExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,36 +82,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		83CCB5C416D96D3200547161 /* KGNotePad */ = {
+		83F92A3E16D96DC100FAC0E4 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				83CCB5CD16D96D3300547161 /* KGAppDelegate.h */,
-				83CCB5CE16D96D3300547161 /* KGAppDelegate.m */,
-				83CCB5C516D96D3200547161 /* Supporting Files */,
+				83F92A3216D96DBC00FAC0E4 /* Default-568h@2x.png */,
+				83F92A3316D96DBC00FAC0E4 /* Default.png */,
+				83F92A3416D96DBC00FAC0E4 /* Default@2x.png */,
+				83F92A3516D96DBC00FAC0E4 /* KGNotePadExampleAppDelegate.h */,
+				83F92A3616D96DBC00FAC0E4 /* KGNotePadExampleAppDelegate.m */,
+				83F9E8EC16DC96F100DF4286 /* KGNotePadExampleViewController.h */,
+				83F9E8ED16DC96F100DF4286 /* KGNotePadExampleViewController.m */,
+				83F9E8EE16DC96F100DF4286 /* KGNotePadExampleViewController.xib */,
+				83F92A3716D96DBC00FAC0E4 /* KGNotePadExample-Prefix.pch */,
+				83F92A3816D96DBC00FAC0E4 /* main.m */,
 			);
-			path = KGNotePad;
-			sourceTree = "<group>";
-		};
-		83CCB5C516D96D3200547161 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				83CCB5C616D96D3200547161 /* KGNotePad-Info.plist */,
-				83CCB5C716D96D3200547161 /* InfoPlist.strings */,
-				83CCB5CA16D96D3200547161 /* main.m */,
-				83CCB5CC16D96D3200547161 /* KGNotePad-Prefix.pch */,
-				83CCB5D016D96D3300547161 /* Default.png */,
-				83CCB5D216D96D3300547161 /* Default@2x.png */,
-				83CCB5D416D96D3300547161 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
+			name = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83CCB5BA16D96D3200547161 /* KGNotePad */ = {
+		83CCB5BA16D96D3200547161 /* KGNotePadExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83CCB5D816D96D3300547161 /* Build configuration list for PBXNativeTarget "KGNotePad" */;
+			buildConfigurationList = 83CCB5D816D96D3300547161 /* Build configuration list for PBXNativeTarget "KGNotePadExample" */;
 			buildPhases = (
 				83CCB5B716D96D3200547161 /* Sources */,
 				83CCB5B816D96D3200547161 /* Frameworks */,
@@ -114,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = KGNotePad;
+			name = KGNotePadExample;
 			productName = KGNotePad;
-			productReference = 83CCB5BB16D96D3200547161 /* KGNotePad.app */;
+			productReference = 83CCB5BB16D96D3200547161 /* KGNotePadExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "David Keegan";
 			};
-			buildConfigurationList = 83CCB5B616D96D3200547161 /* Build configuration list for PBXProject "KGNotePad" */;
+			buildConfigurationList = 83CCB5B616D96D3200547161 /* Build configuration list for PBXProject "KGNotePadExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -141,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83CCB5BA16D96D3200547161 /* KGNotePad */,
+				83CCB5BA16D96D3200547161 /* KGNotePadExample */,
 			);
 		};
 /* End PBXProject section */
@@ -151,10 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CCB5C916D96D3200547161 /* InfoPlist.strings in Resources */,
-				83CCB5D116D96D3300547161 /* Default.png in Resources */,
-				83CCB5D316D96D3300547161 /* Default@2x.png in Resources */,
-				83CCB5D516D96D3300547161 /* Default-568h@2x.png in Resources */,
+				83F92A3916D96DBC00FAC0E4 /* Default-568h@2x.png in Resources */,
+				83F92A3A16D96DBC00FAC0E4 /* Default.png in Resources */,
+				83F92A3B16D96DBC00FAC0E4 /* Default@2x.png in Resources */,
+				83F9E8F016DC96F100DF4286 /* KGNotePadExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,23 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CCB5CB16D96D3200547161 /* main.m in Sources */,
-				83CCB5CF16D96D3300547161 /* KGAppDelegate.m in Sources */,
+				83F92A3C16D96DBC00FAC0E4 /* KGNotePadExampleAppDelegate.m in Sources */,
+				83F92A3D16D96DBC00FAC0E4 /* main.m in Sources */,
+				83F92A4116D96E0C00FAC0E4 /* KGNotePad.m in Sources */,
+				83F9E8EF16DC96F100DF4286 /* KGNotePadExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		83CCB5C716D96D3200547161 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				83CCB5C816D96D3200547161 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		83CCB5D616D96D3300547161 /* Debug */ = {
@@ -244,9 +235,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KGNotePad/KGNotePad-Prefix.pch";
-				INFOPLIST_FILE = "KGNotePad/KGNotePad-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "KGNotePadExample-Prefix.pch";
+				INFOPLIST_FILE = "KGNotePadExample-Info.plist";
+				PRODUCT_NAME = KGNotePadExample;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -255,9 +246,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KGNotePad/KGNotePad-Prefix.pch";
-				INFOPLIST_FILE = "KGNotePad/KGNotePad-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "KGNotePadExample-Prefix.pch";
+				INFOPLIST_FILE = "KGNotePadExample-Info.plist";
+				PRODUCT_NAME = KGNotePadExample;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -265,7 +256,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83CCB5B616D96D3200547161 /* Build configuration list for PBXProject "KGNotePad" */ = {
+		83CCB5B616D96D3200547161 /* Build configuration list for PBXProject "KGNotePadExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CCB5D616D96D3300547161 /* Debug */,
@@ -274,13 +265,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CCB5D816D96D3300547161 /* Build configuration list for PBXNativeTarget "KGNotePad" */ = {
+		83CCB5D816D96D3300547161 /* Build configuration list for PBXNativeTarget "KGNotePadExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CCB5D916D96D3300547161 /* Debug */,
 				83CCB5DA16D96D3300547161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
