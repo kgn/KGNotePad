@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    NSString *textFile = [[NSBundle mainBundle] pathForResource:@"text" ofType:@"txt"];
+    self.notePad.textView.text = [NSString stringWithContentsOfFile:textFile encoding:NSUTF8StringEncoding error:nil];
     [self randFontAction:nil];
 }
 
@@ -30,14 +32,13 @@
         }
     }
     self.fontName = fontNames[arc4random_uniform([fontNames count])];
-    self.notePad.font = [UIFont fontWithName:self.fontName size:round([self.fontSlider value])];
-    self.notePad.lineOffset = 8;
+    self.notePad.textView.font = [UIFont fontWithName:self.fontName size:round([self.fontSlider value])];
     NSLog(@"%@", self.fontName);
-    NSLog(@"%f, %f, %f, %f, %f", self.notePad.font.pointSize, self.notePad.font.lineHeight, self.notePad.font.descender, self.notePad.font.ascender, self.notePad.font.xHeight);
+//    NSLog(@"%f, %f, %f, %f, %f", self.notePad.font.pointSize, self.notePad.font.lineHeight, self.notePad.font.descender, self.notePad.font.ascender, self.notePad.font.xHeight);
 }
 
 - (IBAction)fontSliderAction:(id)sender{
-    self.notePad.font = [UIFont fontWithName:self.fontName size:round([self.fontSlider value])];    
+    self.notePad.textView.font = [UIFont fontWithName:self.fontName size:round([self.fontSlider value])];
 }
 
 @end

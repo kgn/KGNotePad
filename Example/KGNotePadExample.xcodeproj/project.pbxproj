@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8352CD7916E878C4008C9BC6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8352CD7816E878C4008C9BC6 /* QuartzCore.framework */; };
+		8352CD7B16E885D6008C9BC6 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8352CD7A16E885D6008C9BC6 /* text.txt */; };
 		83CCB5BF16D96D3200547161 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCB5BE16D96D3200547161 /* UIKit.framework */; };
 		83CCB5C116D96D3200547161 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCB5C016D96D3200547161 /* Foundation.framework */; };
 		83CCB5C316D96D3200547161 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCB5C216D96D3200547161 /* CoreGraphics.framework */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8352CD7816E878C4008C9BC6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8352CD7A16E885D6008C9BC6 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
 		83CCB5BB16D96D3200547161 /* KGNotePadExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGNotePadExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CCB5BE16D96D3200547161 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83CCB5C016D96D3200547161 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8352CD7916E878C4008C9BC6 /* QuartzCore.framework in Frameworks */,
 				83CCB5BF16D96D3200547161 /* UIKit.framework in Frameworks */,
 				83CCB5C116D96D3200547161 /* Foundation.framework in Frameworks */,
 				83CCB5C316D96D3200547161 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +80,7 @@
 		83CCB5BD16D96D3200547161 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8352CD7816E878C4008C9BC6 /* QuartzCore.framework */,
 				83CCB5BE16D96D3200547161 /* UIKit.framework */,
 				83CCB5C016D96D3200547161 /* Foundation.framework */,
 				83CCB5C216D96D3200547161 /* CoreGraphics.framework */,
@@ -95,6 +101,7 @@
 				83F9E8EE16DC96F100DF4286 /* KGNotePadExampleViewController.xib */,
 				83F92A3716D96DBC00FAC0E4 /* KGNotePadExample-Prefix.pch */,
 				83F92A3816D96DBC00FAC0E4 /* main.m */,
+				8352CD7A16E885D6008C9BC6 /* text.txt */,
 			);
 			name = Example;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 				83F92A3A16D96DBC00FAC0E4 /* Default.png in Resources */,
 				83F92A3B16D96DBC00FAC0E4 /* Default@2x.png in Resources */,
 				83F9E8F016DC96F100DF4286 /* KGNotePadExampleViewController.xib in Resources */,
+				8352CD7B16E885D6008C9BC6 /* text.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

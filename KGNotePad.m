@@ -7,12 +7,47 @@
 //
 
 #import "KGNotePad.h"
+#import <QuartzCore/QuartzCore.h>
+
+@interface KGNotePad()
+@property (weak, nonatomic, readwrite) KGNotePadTextView *textView;
+@end
+
+@interface KGNotePadTextView()
+@property (weak, nonatomic) KGNotePad *parentView;
+@end
 
 @implementation KGNotePad
 
 @synthesize verticalLineColor = _verticalLineColor;
 @synthesize horizontalLineColor = _horizontalLineColor;
 @synthesize paperBackgroundColor = _paperBackgroundColor;
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    if((self = [super initWithCoder:aDecoder])){
+        [self setup];
+    }
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame{
+    if((self = [super initWithFrame:frame])){
+        [self setup];
+    }
+    return self;
+}
+
+- (void)setup{
+    self.lineOffset = 8;
+    KGNotePadTextView *textView = [[KGNotePadTextView alloc] initWithFrame:self.bounds];
+    textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    textView.parentView = self;
+    [self addSubview:textView];
+    self.textView = textView;
+    self.backgroundColor = [UIColor clearColor];
+    [self.layer addSublayer:[self tornPaperLayerWithHeight:12]];
+    [self.layer addSublayer:[self tornPaperLayerWithHeight:9]];
+}
 
 - (void)setVerticalLineColor:(UIColor *)verticalLineColor{
     if(_verticalLineColor != verticalLineColor){
@@ -56,11 +91,6 @@
     return _paperBackgroundColor;
 }
 
-- (void)setFont:(UIFont *)font{
-    [super setFont:font];
-    [self updateLines];
-}
-
 - (void)setLineOffset:(CGFloat)lineOffset{
     if(_lineOffset != lineOffset){
         _lineOffset = lineOffset;
@@ -75,7 +105,7 @@
 
 - (void)updateLines{
     CGFloat width = MAX(CGRectGetWidth([[UIScreen mainScreen] bounds]), CGRectGetHeight([[UIScreen mainScreen] bounds]));
-    CGSize size = CGSizeMake(width, self.font.lineHeight);
+    CGSize size = CGSizeMake(width, self.textView.font.lineHeight);
     UIGraphicsBeginImageContextWithOptions(size, YES, 0);
 
     // TODO: change this to just a standard fill
@@ -85,9 +115,9 @@
 
     CGRect lineRect = CGRectZero;
     lineRect.size = CGSizeMake(size.width, 1);
-    lineRect.origin.y = floor(self.font.descender)+self.lineOffset;
+    lineRect.origin.y = floor(self.textView.font.descender)+self.lineOffset;
     if(lineRect.origin.y < 0){
-        lineRect.origin.y = self.font.lineHeight+lineRect.origin.y;
+        lineRect.origin.y = self.textView.font.lineHeight+lineRect.origin.y;
     }
 
     UIBezierPath *rectanglePath = [UIBezierPath bezierPathWithRect:lineRect];
@@ -109,7 +139,47 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    self.backgroundColor = [UIColor colorWithPatternImage:image];
+    self.textView.backgroundColor = [UIColor colorWithPatternImage:image];
+}
+
+- (CAShapeLayer *)tornPaperLayerWithHeight:(CGFloat)height{
+    CGFloat width = MAX(CGRectGetWidth([[UIScreen mainScreen] bounds]), CGRectGetHeight([[UIScreen mainScreen] bounds]));
+    CGFloat overshoot = 4;
+    CGFloat maxY = height-overshoot;
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    [bezierPath moveToPoint: CGPointMake(-overshoot, 0)];
+    CGFloat x = -overshoot;
+    CGFloat y = arc4random_uniform(maxY);
+    [bezierPath addLineToPoint: CGPointMake(-overshoot, y)];
+    while(x < width+overshoot){
+        y = MAX(maxY-3, arc4random_uniform(maxY));
+        x += MAX(4.5, arc4random_uniform(12.5));
+        [bezierPath addLineToPoint: CGPointMake(x, y)];
+    }
+    y = arc4random_uniform(maxY);
+    [bezierPath addLineToPoint: CGPointMake(width+overshoot, y)];
+    [bezierPath addLineToPoint: CGPointMake(width+overshoot, 0)];
+    [bezierPath addLineToPoint: CGPointMake(-overshoot, 0)];
+    [bezierPath closePath];
+
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.fillColor = [self.paperBackgroundColor CGColor];
+    shapeLayer.shadowColor = [[UIColor blackColor] CGColor];
+    shapeLayer.shadowOffset = CGSizeMake(0, 0);
+    shapeLayer.shadowOpacity = 0.7;
+    shapeLayer.shadowRadius = 2;
+    shapeLayer.shadowPath = [bezierPath CGPath];
+    shapeLayer.path = [bezierPath CGPath];
+    return shapeLayer;
+}
+
+@end
+
+@implementation KGNotePadTextView
+
+- (void)setFont:(UIFont *)font{
+    [super setFont:font];
+    [self.parentView updateLines];
 }
 
 @end
