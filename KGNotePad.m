@@ -166,8 +166,8 @@
     shapeLayer.fillColor = [self.paperBackgroundColor CGColor];
     shapeLayer.shadowColor = [[UIColor blackColor] CGColor];
     shapeLayer.shadowOffset = CGSizeMake(0, 0);
-    shapeLayer.shadowOpacity = 0.7;
-    shapeLayer.shadowRadius = 2;
+    shapeLayer.shadowOpacity = 0.5;
+    shapeLayer.shadowRadius = 1.5;
     shapeLayer.shadowPath = [bezierPath CGPath];
     shapeLayer.path = [bezierPath CGPath];
     return shapeLayer;
