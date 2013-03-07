@@ -1,4 +1,4 @@
-KGNotePad is a view complete with lines and torn paper.
+KGNotePad is a text view complete with lines and torn paper.
 
 ![](https://raw.github.com/kgn/KGNotePad/master/screenshot.png)
 
