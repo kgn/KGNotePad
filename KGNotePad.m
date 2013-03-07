@@ -8,9 +8,6 @@
 
 #import "KGNotePad.h"
 
-@interface KGNotePad()
-@end
-
 @implementation KGNotePad
 
 @synthesize verticalLineColor = _verticalLineColor;
@@ -64,13 +61,19 @@
     [self updateLines];
 }
 
+- (void)setLineOffset:(CGFloat)lineOffset{
+    if(_lineOffset != lineOffset){
+        _lineOffset = lineOffset;
+        [self updateLines];
+    }
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
     [self updateLines];
 }
 
 - (void)updateLines{
-//    NSLog(@"%f,%f,%f,%f", self.font.lineHeight, self.font.descender, self.font.ascender, self.font.xHeight);
     CGFloat width = MAX(CGRectGetWidth([[UIScreen mainScreen] bounds]), CGRectGetHeight([[UIScreen mainScreen] bounds]));
     CGSize size = CGSizeMake(width, self.font.lineHeight);
     UIGraphicsBeginImageContextWithOptions(size, YES, 0);
@@ -82,12 +85,11 @@
 
     CGRect lineRect = CGRectZero;
     lineRect.size = CGSizeMake(size.width, 1);
-    //TODO: figure out how to calculate this "8"
-    lineRect.origin.y = floor(self.font.descender)+8;
+    lineRect.origin.y = floor(self.font.descender)+self.lineOffset;
     if(lineRect.origin.y < 0){
         lineRect.origin.y = self.font.lineHeight+lineRect.origin.y;
     }
-    NSLog(@"%f", self.font.pointSize);
+
     UIBezierPath *rectanglePath = [UIBezierPath bezierPathWithRect:lineRect];
     [self.verticalLineColor setFill];
     [rectanglePath fill];

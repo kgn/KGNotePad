@@ -10,6 +10,9 @@
 
 @interface KGNotePad : UITextView
 
+// TODO: figure out how to compute this
+// TODO: 8 seems to be a good value for most fonts...
+@property (nonatomic) CGFloat lineOffset;
 @property (strong, nonatomic) UIColor *verticalLineColor;
 @property (strong, nonatomic) UIColor *horizontalLineColor;
 @property (strong, nonatomic) UIColor *paperBackgroundColor;
