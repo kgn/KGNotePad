@@ -108,10 +108,8 @@
     CGSize size = CGSizeMake(width, self.textView.font.lineHeight);
     UIGraphicsBeginImageContextWithOptions(size, YES, 0);
 
-    // TODO: change this to just a standard fill
-    UIBezierPath *backgroundPath = [UIBezierPath bezierPathWithRect:(CGRect){CGPointZero, size}];
-    [self.paperBackgroundColor setFill];
-    [backgroundPath fill];
+    [self.paperBackgroundColor set];
+    UIRectFill((CGRect){CGPointZero, size});
 
     CGRect lineRect = CGRectZero;
     lineRect.size = CGSizeMake(size.width, 1);
