@@ -8,4 +8,8 @@ the numbers to know how to compute what this offset should be… if you know ple
 
 Check out the Example project to see the view in action!
 
+-------
+Added support for delegates to change view aspects/view according to the presence of the keyboard (or not)
+
+------
 KGNotePad is distributed under the MIT license.
