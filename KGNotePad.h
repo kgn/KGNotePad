@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-// add support to UITextView Delegates
-@protocol KGNotePadDelegate
--(void)KGNotePadKeyboardUp;
--(void)KGNotePadKeyboardDown;
-@end
-
 @interface KGNotePadTextView : UITextView
 @end
 
@@ -26,6 +20,4 @@
 @property (strong, nonatomic) UIColor *horizontalLineColor;
 @property (strong, nonatomic) UIColor *paperBackgroundColor;
 @property (weak, nonatomic, readonly) KGNotePadTextView *textView;
-@property (strong, nonatomic) id<KGNotePadDelegate> delegate;
-
 @end

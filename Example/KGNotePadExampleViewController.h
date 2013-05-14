@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KGNotePad.h"
 
-@interface KGNotePadExampleViewController : UIViewController <KGNotePadDelegate>
+@interface KGNotePadExampleViewController : UIViewController 
 - (IBAction)randFontAction:(id)sender;
 @end

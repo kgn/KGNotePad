@@ -22,18 +22,6 @@
 @synthesize verticalLineColor = _verticalLineColor;
 @synthesize horizontalLineColor = _horizontalLineColor;
 @synthesize paperBackgroundColor = _paperBackgroundColor;
-@synthesize delegate;
-
-
-#pragma mark - TextView Delegate
--(void)textViewDidBeginEditing:(UITextView *)textView{
-  [delegate KGNotePadKeyboardUp];
-}
-
--(void)textViewDidEndEditing:(UITextView *)textView{
-  [delegate KGNotePadKeyboardDown];
-}
-
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
   if((self = [super initWithCoder:aDecoder])){
@@ -54,7 +42,6 @@
   KGNotePadTextView *textView = [[KGNotePadTextView alloc] initWithFrame:self.bounds];
   textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
   textView.parentView = self;
-  textView.delegate = self;
   [self addSubview:textView];
   self.textView = textView;
   self.backgroundColor = [UIColor clearColor];
