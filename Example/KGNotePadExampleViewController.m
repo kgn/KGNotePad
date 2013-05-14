@@ -7,7 +7,6 @@
 //
 
 #import "KGNotePadExampleViewController.h"
-#import "KGNotePad.h"
 
 @interface KGNotePadExampleViewController()
 @property (weak, nonatomic) IBOutlet KGNotePad *notePad;
@@ -17,9 +16,39 @@
 
 @implementation KGNotePadExampleViewController
 
+
+#pragma mark - KGNotePad Delegates
+-(void)KGNotePadKeyboardUp{
+  // set this value according the device you are using and its orientation:
+  // iPhone
+  //  Landscape: 162
+  //  Portrait: 216
+  // iPad
+  //  Landscape: 308
+  //  Portrait: 264
+  
+  float keyboardHeight = 216+44;
+  // i had to add +44 due to the navigation bar on top
+  
+  // on keyboard up resize the notepad view in order to have the right feedback when you tap enter and reach the end of the visible area
+  self.notePad.frame = CGRectMake(self.notePad.frame.origin.x, self.notePad.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height-keyboardHeight);
+
+
+  NSLog(@"%@",self.notePad);
+}
+
+-(void)KGNotePadKeyboardDown{
+  // on keyboard down restore the original size of the notepad
+  self.notePad.frame = self.view.frame;
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     NSString *textFile = [[NSBundle mainBundle] pathForResource:@"text" ofType:@"txt"];
+  
+  // set the delegate
+  self.notePad.delegate = self;
+  
     self.notePad.textView.text = [NSString stringWithContentsOfFile:textFile encoding:NSUTF8StringEncoding error:nil];
     [self randFontAction:nil];
 }
