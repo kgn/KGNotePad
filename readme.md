@@ -8,4 +8,6 @@ the numbers to know how to compute what this offset should be… if you know ple
 
 Check out the Example project to see the view in action!
 
+
+------
 KGNotePad is distributed under the MIT license.
